@@ -2,9 +2,9 @@
 
 > An interactive, historically accurate battle planning tool set in the pre-World War II era. Built for historians, wargamers, and strategy enthusiasts.
 
-**[▶ Try it Live →](https://dawoodkhan92.github.io/ww2-war-room/)**
+**[▶ Try it Live →](https://dawoodkhan92.github.io/WW2---Claude-Code-Desktop---Sonnet-4.6/)**
 
-![War Room Screenshot](https://raw.githubusercontent.com/dawoodkhan92/ww2-war-room/main/preview.png)
+> Built entirely with [Claude Code Desktop](https://claude.ai/claude-code) (Sonnet 4.6)
 
 ---
 
@@ -60,12 +60,12 @@ The map reflects the world as it was in **September 1938**: post-Anschluss Germa
 ## How to Use
 
 ### Option 1: Live Demo (no install)
-👉 **[https://dawoodkhan92.github.io/ww2-war-room/](https://dawoodkhan92.github.io/ww2-war-room/)**
+👉 **[https://dawoodkhan92.github.io/WW2---Claude-Code-Desktop---Sonnet-4.6/](https://dawoodkhan92.github.io/WW2---Claude-Code-Desktop---Sonnet-4.6/)**
 
 ### Option 2: Run Locally
 ```bash
-git clone https://github.com/dawoodkhan92/ww2-war-room.git
-cd ww2-war-room
+git clone https://github.com/dawoodkhan92/WW2---Claude-Code-Desktop---Sonnet-4.6.git
+cd "WW2---Claude-Code-Desktop---Sonnet-4.6"
 python -m http.server 8080
 # Open http://localhost:8080 in your browser
 ```
