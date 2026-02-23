@@ -1,0 +1,135 @@
+/* ═══════════════════════════════════════════════════════════
+   MAIN.CSS — Design System & CSS Custom Properties
+   WW2 War Room Strategic Planning Map
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── FONTS ── */
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Share+Tech+Mono&family=Oswald:wght@400;600;700&display=swap');
+
+:root {
+  /* Palette — aged paper war room */
+  --color-bg-base:        #0d0d0b;
+  --color-bg-dark:        #111110;
+  --color-bg-panel:       #1a1a16;
+  --color-bg-panel-alt:   #212118;
+  --color-bg-hover:       #28281f;
+
+  --color-border:         #3a3830;
+  --color-border-dim:     #2a2820;
+  --color-border-active:  #c4a44a;
+
+  --color-text-primary:   #d4c89a;
+  --color-text-secondary: #a89c74;
+  --color-text-muted:     #6a6248;
+  --color-text-heading:   #e8d87a;
+
+  --color-gold:           #c4a44a;
+  --color-gold-bright:    #e8d87a;
+  --color-red-action:     #cc2200;
+  --color-blue-action:    #1a4a8a;
+  --color-green-action:   #2d6a2d;
+
+  --color-active-tool:    #c4a44a;
+
+  /* Faction fill colors */
+  --color-axis:           #6b1212;
+  --color-allies:         #2d4a1e;
+  --color-soviet:         #7a1c1c;
+  --color-usa:            #1c3a6b;
+  --color-japan:          #8b4500;
+  --color-british-empire: #5c3d1e;
+  --color-french-empire:  #4a4a1a;
+  --color-neutral:        #5c5c38;
+  --color-contested:      #3a3a3a;
+
+  /* Typography */
+  --font-heading:   'Oswald', sans-serif;
+  --font-body:      'Special Elite', cursive;
+  --font-mono:      'Share Tech Mono', monospace;
+
+  --fs-xs:    0.65rem;
+  --fs-sm:    0.75rem;
+  --fs-base:  0.875rem;
+  --fs-md:    1rem;
+  --fs-lg:    1.15rem;
+  --fs-xl:    1.4rem;
+  --fs-xxl:   1.8rem;
+
+  /* Spacing */
+  --spacing-xs:   4px;
+  --spacing-sm:   8px;
+  --spacing-md:   14px;
+  --spacing-lg:   20px;
+  --spacing-xl:   28px;
+
+  /* Layout dimensions */
+  --toolbar-height:   52px;
+  --ticker-height:    36px;
+  --sidebar-left-w:   220px;
+  --sidebar-right-w:  240px;
+
+  /* Misc */
+  --border-radius: 2px;
+  --transition:    0.15s ease;
+}
+
+/* ── RESET ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  background: var(--color-bg-base);
+  color: var(--color-text-primary);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── APP GRID LAYOUT ── */
+body {
+  display: grid;
+  grid-template-rows: var(--toolbar-height) 1fr var(--ticker-height);
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "toolbar"
+    "main"
+    "ticker";
+  height: 100vh;
+  width: 100vw;
+}
+
+#toolbar {
+  grid-area: toolbar;
+}
+
+#main-area {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: var(--sidebar-left-w) 1fr var(--sidebar-right-w);
+  grid-template-rows: 1fr;
+  overflow: hidden;
+}
+
+#intel-ticker {
+  grid-area: ticker;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--color-bg-dark); }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-border-active); }
+
+/* ── UTILITY ── */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+}
